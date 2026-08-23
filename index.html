@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bloom & Blossom - Flower Shop</title>
+</head>
+    <style> *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body,html {
+    background-color: white;
+    color: #333;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    margin: 0;
+    padding-top: 70px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #e85d75;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    
+}
+
+.hero-bar {
+    width: 100%;
+    height: 500px;
+    padding-top: 25px;
+    background-image: url(img2.jpg);
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: #e85d75;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.btn {
+    background-color: #d4425b;
+}
+
+.products {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 5px;
+    font-size: 20px;
+}
+
+.price {
+    color: #e85d75;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.Flower-Bouquet{
+    padding: 40px;
+}
+.flower-bouquet p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.flower-bouquet-img{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    height: 480px;
+    background: white;
+    border-radius: 10px;
+    padding-left: 80px;
+}
+.bouquet-text {
+    width: 100%;
+    background-color: white;
+    font-weight: bold;
+    /* font-size: 16px; */
+    text-align: center;
+
+}
+.contact-section {
+    padding: 60px 8%;
+    background-color: #fff5f7;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-info h3 {
+    color: #e85d75;
+    margin-bottom: 15px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.contact-form {
+    flex: 1.5;
+    min-width: 300px;
+    background: white;
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #e85d75;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 8% 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e85d75;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-links li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.copyright {
+    color: #888;
+    font-size: 14px;
+}
+
+</style>
+
+<body>
+    <header>
+        <div class="logo"> Bloom & Blossom</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-bar">
+        <div class="hero-text">
+            <h1>Fresh Flowers For Every Occasion</h1>
+            <p>Make every moment special with our handpicked fresh bouquets.</p>
+            <a href="#home" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section id="offers" class="products">
+        <h2>Our Popular Flowers</h2>
+        <div class="product-grid">
+            
+            <div class="card">
+                <img src="img4.jpg" alt="flower1">
+                <h3>Pink And White Tulips</h3>
+                <p class="price">$15.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img src="img3.jpg" alt="flower2">
+                <h3>Stem Tulips</h3>
+                <p class="price">$12.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img src="img7.jpg" alt="flower3">
+                <h3>Bright Tulips</h3>
+                <p class="price">$18.00</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+    </section>
+
+      <section class="Flower-Bouquet">
+        <div class="bouquet-text">
+            <h1> BEAUTIFUL TULIPS</h1>
+     <p>Tulip flowers are widely admired around the world for their sleek elegance, vibrant colors, and graceful simplicity. Blooming primarily in the spring, these classic flowers are easily recognized by their cup-shaped blossoms and smooth, broad leaves. Tulips come in almost every color imaginable, including deep reds, soft pinks, sunny yellows, and pure whites. They come in almost every color imaginable, including red, yellow, pink, purple, and white. Each color carries its own special symbol—red tulips represent deep love, yellow ones express cheerful thoughts and friendship, while white tulips symbolize forgiveness and purity. Their stunning variety makes them a popular choice for gardens and fresh floral arrangements. Although commonly associated with the Netherlands, where massive tulip fields attract millions of visitors every year, these beautiful flowers actually originated in Central Asia and Turkey. Over the centuries, they grew in popularity across Europe and eventually the rest of the world. Tulips thrive best in well-drained soil with adequate sunlight, making them relatively easy to grow and maintain. With their refined shape and refreshing charm, tulips are not only a favorite among gardeners but also a wonderful gift to bring joy to any special occasion.Tulips are colorful and beautiful flowers that grow in many parts of the world.</p>
+    </div>
+
+      </section>
+
+      <section id="categories" class="products">
+        <h2>YOU CAN BUY THESE BEAUTIFUL TULIPS</h2>
+        <div class="product-grid">
+            
+            <div class="card">
+                <img src="imgcat.2.jpg" alt="cat.1">
+                <h3>Stem Tulips</h3>
+                <p class="price">$15.00</p>
+                <button>BUY</button>
+            </div>
+
+            <div class="card">
+                <img src="imgcat.6.jpg" alt="cat.2">
+                <h3>Cards Tulips</h3>
+                <p class="price">$11.00</p>
+                <button>BUY</button>
+            </div>
+
+            <div class="card">
+                <img src="img8.jpg" alt="cat.3">
+                <h3>Bright Tulips</h3>
+                <p class="price">$25.00</p>
+                <button>BUY</button>
+            </div>
+
+            <div class="card">
+                <img src="imgcat.9.jpg" alt="cat.4">
+                <h3>Colourful Tulips</h3>
+                <p class="price">$23.00</p>
+                <button>BUY</button>
+            </div>
+        
+             <div class="card">
+                <img src="imgcat.7.jpg" alt="cat.5">
+                <h3>Tulips With Stem</h3>
+                <p class="price">$27.00</p>
+                <button>BUY</button>
+            </div>
+
+             <div class="card">
+                <img src="img5.png" alt="cat.6">
+                <h3>Pink Tulips</h3>
+                <p class="price">$35.00</p>
+                <button>BUY</button>
+            </div>
+        </div>
+      </section>
+        <section id="about" class="flower-bouquet-img">
+
+        <img src="img8.jpg" alt="about flower">
+        <div class="bouquet-text">
+            <h1> BEAUTIFUL FLOWER</h1>
+        <p>They bloom in spring and are known for their smooth petals and cup-shaped flowers. Tulips come in many colors, including red, yellow, pink, purple, white, and orange. Unlike many other flowers, tulips continue to grow in height even after being cut and placed in a vase. With their smooth leaves and graceful stems, tulips are a favorite choice for modern floral arrangements and special gifts.
+           These flowers symbolize deep love, rebirth, and the fresh beginning of the spring season. They come in almost every color imaginable, including red, yellow, pink, purple, and white. Tulips are beautiful spring-blooming flowers known for their vibrant colors and distinctive cup shape. Tulips grow from underground bulbs and thrive best in cold winter climates that lead into sunny springs. They thrive best in cool spring weather and require plenty of sunlight to open their beautiful blossoms completely. They bloom in almost every shade, with each color symbolizing special meanings like love, joy, and new beginnings. These flowers are often planted in gardens because they make the surroundings bright and attractive. The tulip is a symbol of love, happiness, and fresh beginnings. It needs sunlight, fertile soil, and regular watering to grow well. People enjoy giving tulips as gifts on birthdays, weddings, and other special occasions. Their beauty and elegance make them one of the most popular flowers around the world.The tulip is one of the most admired flowers because of its simple shape and bright colors. It grows from a bulb and blooms during the spring season. Tulips are easy to recognize and are often seen in parks, gardens, and flower festivals. They attract bees and butterflies, which help pollinate plants. Many people love tulips because they bring beauty, joy, and a fresh feeling to nature. With proper care, sunlight, and water, tulips grow healthy and make every garden look colorful and peaceful. In addition, caring for tulips is remarkably easy, as they require minimal effort once planted in well-drained soil. Loved worldwide for their simple beauty, tulips bring charm and fresh energy to any garden or bouquet.</p></div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <p>Have questions or need custom bouquets? Send us a message!</p>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <div class="info-item"><strong>Address:</strong> ABC, Karachi</div>
+                <div class="info-item"><strong> Phone:</strong> +92 300 1234567</div>
+                <div class="info-item"><strong>Email:</strong> info@bloomblossom.com</div>
+                <div class="info-item"><strong>Hours:</strong> Mon - Sat (9:00 AM - 9:00 PM)</div>
+            </div>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+<footer>
+        <div class="footer-content">
+            <div class="footer-logo">Bloom & Blossom</div>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <p class="copyright">2026 Bloom & Blossom. All rights reserved.</p>
+    </footer>
+</body>
+</html>
